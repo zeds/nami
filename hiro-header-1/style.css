@@ -5,3 +5,25 @@
   text-decoration: none;
   list-style: none;
 }
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background: gray;
+}
+header {
+	width: 100%;
+	height: 60px;
+	background: skyblue;
+	display: flex;
+	align-items: center
+}
+
+header .area_logo_header {
+	background: red;
+}
+
+header .area_nav_header {
+	background: blue
+}
+
