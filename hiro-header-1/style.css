@@ -24,6 +24,39 @@ header .area_logo_header {
 }
 
 header .area_nav_header {
-	background: blue
-}
+	background: blue;
+	margin-left:auto;
 
+}
+.list_nav_header{
+	display: flex;
+	align-items: center;
+}
+.list_nav_header > li + li {
+margin-left: 40px;
+}
+.list_nav_header a {
+	color:#fff ;
+	font: 500 15px/1em 'noto sans janpanese', sans-serif;
+}
+.list_nav_header .btn_contact {
+color:#000;
+display: flex;
+align-items: center;
+height: 36px;
+padding: 0 24px; 
+background: #0cf;
+border-radius: 2px;
+position: relative;
+
+}
+.list_nav_header .btn_contact:before {
+content: "";
+display: block;
+width: 24px;
+height: 24px;
+background: red;
+position: absolute;
+top: 0;
+left: 0;
+}
