@@ -16,50 +16,52 @@ header {
 	height: 60px;
 	background: black;
 	display: flex;
-	align-items: center
-}
-
-header .area_logo_header {
-	background: red;
-}
-
-header .area_nav_header {
-	background: black;
-	margin-left:auto;
-
+	align-items: center;
+	padding: 0 20px;
 }
 .list_nav_header{
 	display: flex;
 	align-items: center;
+	margin-left: auto;
 }
 .list_nav_header > li + li {
-margin-left: 40px;
+	margin-left: 40px;
 }
 .list_nav_header a {
 	color:#fff ;
 	font: 500 15px/1em 'noto sans janpanese', sans-serif;
 }
 .list_nav_header .btn_contact {
-color:#000;
-display: flex;
-align-items: center;
-height: 36px;
-padding: 0 24px; 
-background: #0cf;
-border-radius: 2px;
-position: relative;
-
+	color:#000;
+	display: flex;
+	align-items: center;
+	height: 36px;
+	padding: 0 24px 0 37px;
+	background: #0cf;
+	border-radius: 2px;
+	position: relative;
 }
 .list_nav_header .btn_contact:before {
-content: "";
-display: block;
-width: 24px;
-height: 24px;
-background: url(ico_mail_black.svg) no-repeat center center ;
-background-size: contain;
-
-position: absolute;
-top: 50%;
-left: 10px;
-transform: translate(0,-50%);
+	content: "";
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url(ico_mail_black.svg) no-repeat center center ;
+	background-size: contain;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translate(0,-50%);
 }
+
+@media screen and (0px < width) {
+	.list_nav_header {
+		display: none;
+	}
+}
+@media screen and (900px < width) {
+	.list_nav_header {
+		display: flex;
+	}
+}
+
