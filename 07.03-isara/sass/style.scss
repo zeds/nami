@@ -1,0 +1,25 @@
+@use "_reset.scss";
+
+body {
+	background-color: white;
+}
+.container {
+	max-width: 1200px;
+
+}
+header {
+	background-color: gray;
+}
+footer {
+	background-color: gray;
+}
+
+
+.container {
+	.box1 {
+		color: white;
+	}
+	.box2 {
+		color: green;
+	}
+}
