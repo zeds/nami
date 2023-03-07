@@ -38,7 +38,9 @@ nav {
 	align-items: center;
 	margin-left: auto;
 	font-size: 5px;
+	
 }
+
 .list_nav_header2 {
 	display: flex;
 	align-items: center;
@@ -46,6 +48,7 @@ nav {
 	font-size: 18px;
 	margin-top: 10px;
 	border-right: 1px solid gray;
+
 }
 .list_nav_header1 > li + li {
 	margin-left: 10px;
@@ -72,6 +75,7 @@ nav {
 .list_nav_header2 > li:hover {
 	background: gray;
 	border-radius: 5px;	
+
 }
 @media screen and (0px < width) {
 	.list_nav_header1, .list_nav_header2 {
