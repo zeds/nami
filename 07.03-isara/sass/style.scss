@@ -15,9 +15,9 @@ a {
 	border-radius: 100px;
 
 }
+
 .container {
 	max-width: 1200px;
-
 }
 
 .header {
@@ -25,6 +25,7 @@ a {
 	padding: 16px 0;
 	.container {
 		display: flex;
+		margin: 0 auto;
 		align-items: center;
 	}
 	&_logo {
