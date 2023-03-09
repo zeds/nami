@@ -1,0 +1,161 @@
+//@use "_reset.scss";
+@use "_responsive.scss" as *;
+
+* {
+	all: unset;
+	display: revert;
+}
+
+body {
+	background-color: white;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+.button {
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 0.08em;
+	background-color: #000;
+	padding: 16px 24px;;
+	display: inline-block;
+	border-radius: 100px;
+	@include responsive(lg){
+		font-size: 13px;
+	}
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+.header {
+	background-color: #fff;
+	padding: 16px 0;
+	@include responsive(sm) {
+		padding: 0;
+	}
+	.container {
+		display: flex;
+		margin: 0 auto;
+		align-items: center;
+		@include responsive(sm) {
+			padding-right: 0;
+		}
+		}
+	&_logo {
+		display: flex;
+		gap: 12px;
+		align-items: flex-end;
+		@include responsive(sm){
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			gap: 0px;
+		}
+	
+		img {
+			height: 32px;
+			@include responsive(sm){
+				height: 24px;
+			}
+		}
+		p {
+			font-size: 14px;
+			font-weight: 600;
+			@include responsive(sm){
+				font-size: 12px;
+			}
+		}
+	}
+	&_action {
+		margin: 0 0 0 auto;
+		.button {
+			@include responsive(sm) {
+				border-radius: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.5em;
+				padding: 8px 12px;
+				font-size: 12px;
+			}
+			@include responsive(sm) {
+				border-radius: 0;
+				padding: 10px;
+			}
+			img {
+				width: 28px;
+				display: none;
+				@include responsive(sm) {
+					display: block;
+				}
+			}
+			.sp {
+				display: none;
+				@include responsive(sm) {
+					display: block;
+				}
+			}
+			.pc {
+				display: block;
+				@include responsive(sm) {
+					display: none;
+				}
+
+			}
+		}
+	}
+}
+main {
+	background-color: #ddd;
+}
+.mainvisual {
+	background-image: url(../isara-background.png);
+	background-size: cover;
+	background-position: center center;
+	padding: 80px 0;
+	@include responsive(sm){
+		padding: 40px 0;
+	}
+	.container {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&_title {
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 1.7em;
+		letter-spacing: 0.04em;
+		@include responsive(lg){
+			font-size: 24px;
+		}
+		@include responsive(sm){
+			font-size: 20px;
+		}
+	}
+	img {
+		height: 80px;
+		margin: 24px 0 48px;
+	}
+	&_name {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.2em;
+		@include responsive(lg){
+			font-size: 17px;
+		}
+		@include responsive(sm){
+			font-size: 14px;
+		}
+
+	}
+
+}
+footer {
+	background-color: #ccc;
+}
