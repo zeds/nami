@@ -1,0 +1,82 @@
+@use "_reset.scss";
+
+body {
+    background-color: white;
+}
+a{
+color: black;
+text-decoration: none;
+}
+.button {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    background-color: black;
+    padding: 16px 24px;
+    display: inline-block;
+    border-radius: 100px;
+    }
+    
+.header {
+    background-color: gray;
+    padding: 16px 0;
+    .container {
+        display: flex;
+    }
+    &_logo {
+        display: flex;
+        gap: 12px;
+        align-items: flex-end;
+        img {
+            height: 32px;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    &_action {
+        margin: 0 0 0 auto;
+    }
+}
+.container {
+max-width: 1200px;
+margin: auto;
+
+}
+main {
+    background-color: white;
+    .mainvisual {
+        background-color: lightgray;
+        padding: 80px 0;
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+            height: 80px;
+            margin: 24px 0 48px;
+        }
+        &_title {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.7em;
+            letter-spacing: 0.04em;
+        }
+        &_name {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.2em;
+        }
+		
+    }
+}
+footer {
+    background-color: gray;
+}
+.header_logo{
+    display: flex;
+    align-items: center;
+}

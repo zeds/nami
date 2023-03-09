@@ -15,15 +15,17 @@
 img{
  	width: 100px;
   	height: 50px;
+	
 }
 header{
 	height: 50px;
 	width: 2000px;
-	padding: 9px 0 8px;
+	padding: 0 24px 0 37px;
 	background: white;
 	/* margin-left: auto; */
 	display: flex;
 	align-items: center;
+	
 }
 nav{
   	display: flex;
@@ -32,7 +34,7 @@ nav{
 }
 .list_nav_header1 {
 	display: flex;
-	align-items: center;;
+	align-items: center;
 	margin-left: 50px;
 }
 .list_nav_header2{
@@ -66,10 +68,9 @@ li :hover {
 	height: 24px;
 	background: url(shopping-bag.svg) no-repeat center center ;
 	background-size: contain;
+	margin: 40px ;
 }
-.btn-shopping-bag {
-  	margin: 40px ;
-}
+
 @media screen and (0px < width) {
 	.list_nav_header1, .list_nav_header2 {
 		display: none;
