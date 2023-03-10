@@ -1,0 +1,189 @@
+* {
+  all: unset;
+  display: revert;
+}
+
+body {
+  background-color: white;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.button {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  background-color: #000;
+  padding: 16px 24px;
+  display: inline-block;
+  border-radius: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .button {
+    font-size: 13px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 16px 0;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0;
+  }
+}
+.header .container {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .header .container {
+    padding-right: 0;
+  }
+}
+.header_logo {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+@media screen and (max-width: 768px) {
+  .header_logo {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0px;
+  }
+}
+.header_logo img {
+  height: 32px;
+}
+@media screen and (max-width: 768px) {
+  .header_logo img {
+    height: 24px;
+  }
+}
+.header_logo p {
+  font-size: 14px;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .header_logo p {
+    font-size: 12px;
+  }
+}
+.header_action {
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .header_action .button {
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_action .button {
+    border-radius: 0;
+    padding: 10px;
+  }
+}
+.header_action .button img {
+  width: 28px;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header_action .button img {
+    display: block;
+  }
+}
+.header_action .button .sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header_action .button .sp {
+    display: block;
+  }
+}
+.header_action .button .pc {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .header_action .button .pc {
+    display: none;
+  }
+}
+
+main {
+  background-color: #ddd;
+}
+
+.mainvisual {
+  background-image: url(../isara-background.png);
+  background-size: cover;
+  background-position: center center;
+  padding: 80px 0;
+}
+@media screen and (max-width: 768px) {
+  .mainvisual {
+    padding: 40px 0;
+  }
+}
+.mainvisual .container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainvisual_title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.7em;
+  letter-spacing: 0.04em;
+}
+@media screen and (max-width: 1200px) {
+  .mainvisual_title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mainvisual_title {
+    font-size: 20px;
+  }
+}
+.mainvisual img {
+  height: 80px;
+  margin: 24px 0 48px;
+}
+.mainvisual_name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+@media screen and (max-width: 1200px) {
+  .mainvisual_name {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mainvisual_name {
+    font-size: 14px;
+  }
+}
+
+footer {
+  background-color: #ccc;
+}/*# sourceMappingURL=style.css.map */
