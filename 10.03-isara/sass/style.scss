@@ -1,5 +1,8 @@
-//@use "_reset.scss";
+@use "_reset.scss" ;
+
 @use "_responsive.scss" as *;
+
+@use "_button.scss" as *;
 
 * {
 	all: unset;
@@ -13,18 +16,7 @@ a {
 	color: #000;
 	text-decoration: none;
 }
-.button {
-	color: #fff;
-	font-size: 14px;
-	letter-spacing: 0.08em;
-	background-color: #000;
-	padding: 16px 24px;;
-	display: inline-block;
-	border-radius: 100px;
-	@include responsive(lg){
-		font-size: 13px;
-	}
-}
+
 
 .container {
 	max-width: 1200px;
@@ -110,7 +102,11 @@ a {
 	}
 }
 main {
-	background-color: #ddd;
+	background-color: orange;
+	> section {
+		padding: 40px 0;
+
+	}
 }
 .mainvisual {
 	background-image: url(../isara-background.png);
@@ -155,6 +151,74 @@ main {
 
 	}
 
+}
+.cta {
+	color: #fff;
+	background-color: gray;
+	.container {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;	
+	}
+	&_copy{
+		font-size: 28px;
+		font-weight: 600;
+		line-height: 1.7;
+	}
+	&_attention{
+		color: #c7254e;
+		background:white;
+		font-size: 17px;
+		font-weight: 600;
+		padding: 0.2em;
+		border-radius: 3px;
+		margin: 16px 0 0;
+	}
+	&_info{
+		font-size: 18px;
+		font-weight: 600;
+		& + & {
+			margin: 16px 0 0;	
+		}
+		@include responsive(sm){
+			font-size: 16px;
+		}
+		letter-spacing: 0.08em;
+		span {
+			@include responsive(sm){
+				display: block;
+				margin: 0.5em 0 0;
+			}
+		}
+	}
+	&_sns{
+		margin: 24px 0 0;
+
+	}
+	.button-lg {
+		width: 100%;
+		margin: 40px 0;
+		max-width: 800px;
+	}
+}
+.section_title {
+	font-size: 28px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.5;
+	position: relative;
+	&::before{
+		content: "";
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color: blue;
+		position: absolute;
+		// inset: 0 auto auto 0;
+		top: 0;
+		left: 0;
+	}
 }
 footer {
 	background-color: #ccc;
