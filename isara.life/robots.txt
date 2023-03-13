@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-admin/
+
+Sitemap: https://isara.life/sitemap.rss
+
+
+Sitemap: https://isara.life/sitemap.xml
