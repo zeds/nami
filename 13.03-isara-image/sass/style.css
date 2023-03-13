@@ -1,0 +1,32 @@
+.hoge {
+  background: red;
+}
+
+body {
+  background-image: url(main.jpg);
+}
+
+@media screen and (min-width: 600px) {
+  .hoge {
+    background: red;
+  }
+  img {
+    background-image: url(main.jpg);
+  }
+}
+@media screen and (min-width: 800px) {
+  .hoge {
+    background: blue;
+  }
+  img {
+    background-image: url(mainsp.jpg);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .hoge {
+    background: green;
+  }
+  img {
+    background-image: url(main.jpg) no-repeat center center/cover;
+  }
+}/*# sourceMappingURL=style.css.map */
