@@ -281,22 +281,43 @@ main > section {
   align-items: center;
 }
 .cta_copy {
-  font-size: 28px;
   font-weight: 600;
   line-height: 1.7;
+}
+@media screen and (max-width: 1200px) {
+  .cta_copy {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cta_copy {
+    font-size: 16px;
+  }
 }
 .cta_attention {
   color: #c7254e;
   background: white;
-  font-size: 17px;
+  -webkit-text-decoration: none solid rgb(199, 37, 78);
+          text-decoration: none solid rgb(199, 37, 78);
   font-weight: 600;
   padding: 0.2em;
   border-radius: 3px;
   margin: 16px 0 0;
 }
+@media screen and (max-width: 1200px) {
+  .cta_attention {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cta_attention {
+    font-size: 14.4px;
+  }
+}
 .cta_info {
   font-size: 18px;
   font-weight: 600;
+  line-height: 25.7px;
   letter-spacing: 0.08em;
 }
 .cta_info + .cta_info {
@@ -320,10 +341,12 @@ main > section {
   width: 100%;
   margin: 40px 0;
   max-width: 800px;
+  -webkit-text-decoration: line-through solid rgb(255, 255, 255);
+          text-decoration: line-through solid rgb(255, 255, 255);
 }
 
 .section_title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   text-align: center;
   max-width: 860px;
@@ -370,17 +393,22 @@ main > section {
   text-align: center;
 }
 .question p {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  color: #333333;
 }
 .question p + p {
   margin: 1.5em 0 0;
 }
 .question strong {
-  font-weight: 600;
-  font-size: 1.1em;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22.85px;
+  letter-spacing: 1.5px;
   display: inline-block;
-  border-bottom: 4px solid var(--color_secconday);
+  border-bottom: 8px solid var(--color_secconday);
   position: relative;
 }
 .question strong::before {
@@ -392,6 +420,26 @@ main > section {
   position: absolute;
   inset: auto auto 0 0;
   z-index: -1;
+}
+
+.statement {
+  background-color: #fef5e0;
+}
+.statement .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.statement p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.85px;
+  letter-spacing: 1.5px;
+  color: #333333;
+}
+.statement p + p {
+  margin: 1.5em 0 0;
 }
 
 footer {
