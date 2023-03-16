@@ -7,9 +7,13 @@ html {
 }
 body {
 	color: #fff;
-	background-color: gray;
+	background-color: #000;
 	max-width: 375px;
 	margin: 0 auto;
+}
+a {
+	color: #fff;
+	text-decoration: none;
 }
 header {
 	height: 48px;
@@ -40,10 +44,12 @@ header {
 }
 .profile {
 	padding: 0 16px;
+	margin: 16px 0 0;
 }
 .profile_head {
 	display: flex;
 	align-items: center;
+	gap: 24px;
 }
 .profile_head_image img {
 	display: block;
@@ -55,6 +61,7 @@ header {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: center;
+	flex: auto;
 }
 .profile_head_count {
 	font-size: 12px;
@@ -63,10 +70,78 @@ header {
 }
 
 .profile_head_count span {
+	font-size: 11px;
 	font-weight: normal;
 	display: block;
 }
 
 .profile_body {
+	margin: 8px 0 0;
 
+}
+.profile_body_text p {
+	font-size: 11px;
+
+}
+.profile_body_text p span {
+	color: #aaa;
+	display: block;
+
+}
+.profile_body_text ul {
+	list-style-type: none;
+
+}
+.profile_body_text ul li {
+	font-size: 11px;
+	position: relative;
+
+}
+.profile_body_text ul li a {
+	color: #aaa;
+	margin-left: 1.5em;
+}
+.profile_body_text ul li::before {
+	content: "-";
+	position: absolute;
+	inset: 0 auto auto 0;
+}
+.profile_body_text a {
+	color: #dff1fe;
+	font-size: 11px;;
+}
+.profile_body_follower {
+	font-size: 11px;
+	display: flex;
+	align-items: center;
+	margin-top: 8px;
+}
+.profile_body_follower span {
+	color: #ccc;
+	display: inline-block;
+	margin-left: 1em;
+}
+.profile_body_follower img {
+display: block;
+width: 32px;
+height: 32px;
+border-radius: 50%;
+}
+.profile_body_action {
+	display: grid;
+	grid-template-columns: 1fr 1fr auto;
+	gap: 6px;
+	margin: 16px 0 0;
+	
+}
+.profile_body_action a {
+	font-size: 12px;
+
+	display: grid;
+	place-items: center;
+	height: 32px;
+	background-color: #333;
+	min-width: 32px;
+	border-radius: 8px;
+	
 }
