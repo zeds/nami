@@ -114,7 +114,7 @@ header {
 	margin-left: 1.5em;
 }
 .profile_body_text ul li::before {
-	content: "-";
+	content: "";
 	position: absolute;
 	inset: 0 auto auto 0;
 }
