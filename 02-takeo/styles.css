@@ -1,0 +1,46 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: black;
+}
+
+.GlobalContainer {
+	width: 100%;
+	height: 100vh;
+	background: gray;
+	padding: 10px;
+}
+header {
+	background: red;
+}
+nav {
+	background: yellow;
+}
+.mainContainer {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	gap: 10px;
+}
+main {
+
+}
+article {
+	background: green;
+}
+section {
+	background: orange;
+	border: 2px solid black;
+}
+aside {
+	background: blue;
+}
+footer {
+	background: skyblue;
+}
+@media screen and (max-width: 768px) {
+  .mainContainer {
+		grid-template-columns: 1fr;
+  }
+}
+
