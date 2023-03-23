@@ -17,30 +17,30 @@ header {
 nav {
 	background: yellow;
 }
+.mainContainer {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	gap: 10px;
+}
 main {
-	display: flex;
+
 }
 article {
-	width: 100%;
 	background: green;
 }
 section {
 	background: orange;
-	margin-bottom: 5px;
+	border: 2px solid black;
 }
 aside {
-	width: 360px;
 	background: blue;
 }
 footer {
 	background: skyblue;
 }
 @media screen and (max-width: 768px) {
-  main {
-		flex-direction: column;
+  .mainContainer {
+		grid-template-columns: 1fr;
   }
-	aside {
-		width: 100%;
-	}
 }
 

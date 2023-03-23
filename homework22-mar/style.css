@@ -15,18 +15,24 @@ header {
     font-size: 20px;
 }
 nav {
+	display: flex;
+	justify-content: space-between;
     background-color: yellow;
     color: black;
     font-size: 18px;
     padding: 0;
     margin-right: 0;
 }
+.mainContainer {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	gap: 10px;
+}
 main {
     background-color: brown;
     display: flex;
     justify-content: space-evenly;
-   
-}  
+}
 article {
     background-color: green;
     color: black;
@@ -37,7 +43,6 @@ aside {
     background-color:blue;
     color: black;
     font-size: 18px;
-    width: 360px;
 }
 li {
     background-color: orange;
@@ -55,11 +60,7 @@ footer {
     font-size: 18px;
 }
 @media screen and (max-width: 968px) {
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-    aside {
-        width: 100%;
-    }
+	.mainContainer {
+		grid-template-columns: 1fr;
+	}
 }
