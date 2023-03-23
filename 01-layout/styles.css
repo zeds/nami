@@ -1,0 +1,46 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: black;
+}
+
+.GlobalContainer {
+	width: 100%;
+	height: 100vh;
+	background: gray;
+	padding: 10px;
+}
+header {
+	background: red;
+}
+nav {
+	background: yellow;
+}
+main {
+	display: flex;
+}
+article {
+	width: 100%;
+	background: green;
+}
+section {
+	background: orange;
+	margin-bottom: 5px;
+}
+aside {
+	width: 360px;
+	background: blue;
+}
+footer {
+	background: skyblue;
+}
+@media screen and (max-width: 768px) {
+  main {
+		flex-direction: column;
+  }
+	aside {
+		width: 100%;
+	}
+}
+
