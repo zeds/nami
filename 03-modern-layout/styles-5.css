@@ -1,0 +1,31 @@
+.parent {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+header {
+  padding: 2rem;
+  grid-column: 1 / 4;
+  background-color: pink;
+
+}
+
+.left-side {
+  grid-column: 1 / 2;
+  background-color: green;
+}
+
+main {
+  grid-column: 2 / 3;
+  background-color: aquamarine;
+}
+
+.right-side {
+  grid-column: 3 / 4;
+  background-color: brown;
+}
+
+footer {
+  grid-column: 1 / 4;
+  background-color: pink;
+}
