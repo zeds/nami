@@ -5,6 +5,7 @@ https://coliss.com/articles/build-websites/operation/css/useful-layouts-using-mo
 2.最大値と最小値を決め、伸縮するカード
 3.コンテナに合わせて最適化されるカード
 4.スペースに合わせて伸縮するパンケーキ
+
 5.聖杯レイアウト
 6.ラインナップ
 7.積み重なるパンケーキ
