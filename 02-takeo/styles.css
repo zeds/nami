@@ -32,12 +32,16 @@ ul {
 		display: none;
 	}
 }
-li + li {
+/* li + li {
 	margin-left: 10px;
-}
+} */
 .img_logo {
 	width: 200px;
 	height: 200px;
+}
+.section2 img {
+	width: 123px;
+	height: 123px;
 }
 nav {
 	background: yellow;
@@ -62,6 +66,17 @@ h2 {
 }
 p {
 	color: blue;
+	padding: 9px auto;
+	display: flex;
+	justify-content: center;
+}
+.section2 li {
+	display: flex;
+	flex-direction: column;
+
+	width: 145px;
+	height: 182px;
+	padding: 10px;
 }
 .section1_end {
 	display: flex;
@@ -69,25 +84,84 @@ p {
 }
 .section2 ul {
 	display: grid;
-	grid-template-columns: repeat(4,1fr);
+	grid-template-columns: repeat(5,1fr);
+	/* grid-template-rows: repeat(2,1fr); */
+	
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
+	.section2 ul {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+	}
+}
+@media screen and (max-width: 980px) {
+	.section2 ul {
+		display: grid;
+		grid-template-columns: repeat(6,1fr);
+	}
+	aside {
+		display: none;
+	}
+}
+@media screen and (max-width: 810px) {
+	.section2 ul {
+		display: grid;
+		grid-template-columns: repeat(5,1fr);
+	}
+	aside {
+		display: none;
+	}
+}
+@media screen and (max-width: 755px) {
+	.section2 ul {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+	}
+	aside {
+		display: none;
+	}
+}
+@media screen and (max-width: 755px) {
+	.section2 ul {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+	}
+	aside {
+		display: none;
+	}
+}
+@media screen and (max-width: 600px) {
 	.section2 ul {
 		display: grid;
 		grid-template-columns: repeat(3,1fr);
 	}
+	aside {
+		display: none;
+	}
 }
-.section2 ul li a {
+
+.section2 dl {
+	max-width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	border-radius: 5px;
+	border: 1px solid gray;
+	width: 123px;
+	height: 158px;
 }
-.section2 ul li {
-	margin: 10px;
+.section2 img {
+	width: 123px;
+	height: 123px;
+
 }
-.section2 ul li + li {
-	margin: 0 10px;
+.section2 dt {
+	height: 36px;
+	width: 123px;
+	padding: 10px 5px;
+    font-weight: bold;
+    text-align: center;
 }
 .section3 p {
 	width: 100px;

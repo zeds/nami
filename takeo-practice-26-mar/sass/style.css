@@ -1,0 +1,194 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+  font-size: 16px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.GlobalContainer {
+  width: 100%;
+  height: 100vh;
+}
+.GlobalContainer .header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid lightgray;
+}
+.GlobalContainer .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.GlobalContainer .header-h1 {
+  margin-left: 20px;
+}
+.GlobalContainer .header-icon .icon-social-media {
+  font-size: 12px;
+  background-color: blue;
+  margin: 5px;
+  padding: 1px auto;
+  display: flex;
+  align-items: center;
+}
+.GlobalContainer .header-icon ul {
+  display: flex;
+}
+.GlobalContainer .header-icon li img {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+}
+.GlobalContainer .header-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.GlobalContainer .header-bottom .header-logo img {
+  width: 200px;
+  height: 100px;
+}
+.GlobalContainer .header-bottom ul {
+  display: flex;
+  align-items: center;
+}
+.GlobalContainer .header-bottom ul li {
+  margin: 10px;
+  padding: 5px;
+  font-weight: 200;
+  border-radius: 5px;
+}
+.GlobalContainer .header-bottom ul li :hover {
+  border-bottom: 5px solid black;
+}
+.GlobalContainer .header-bottom .header-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.GlobalContainer .main-content {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.GlobalContainer .main-content .main-content-right {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.GlobalContainer .main-content .main-content-right section {
+  margin-bottom: 20px;
+}
+.GlobalContainer .main-content .main-content-right img {
+  width: 500px;
+  height: 400px;
+  display: block;
+}
+.GlobalContainer .main-content .main-content-right h2 {
+  color: orange;
+  padding-bottom: 30px;
+  border-bottom: 2px solid orange;
+}
+.GlobalContainer .main-content .main-content-right .section1 {
+  height: 200px;
+  width: 100%;
+  padding: 10px;
+}
+.GlobalContainer .main-content .main-content-right .section1 :hover {
+  border-bottom: 1px solid blue;
+}
+.GlobalContainer .main-content .main-content-right .section1 a {
+  color: blue;
+}
+.GlobalContainer .main-content .main-content-right .section1 .link-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.GlobalContainer .main-content .main-content-right .section2 .dt {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.GlobalContainer .main-content .main-content-right .section2 .dt .dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.GlobalContainer .main-content .main-content-right .section2 .dt .dl img {
+  width: 100px;
+  height: 100px;
+}
+.GlobalContainer .main-content .main-content-right .section3 {
+  display: flex;
+  flex-direction: column;
+}
+.GlobalContainer aside {
+  width: 265px;
+  height: 400px;
+}
+
+nav {
+  background: yellow;
+}/*# sourceMappingURL=style.css.map */
