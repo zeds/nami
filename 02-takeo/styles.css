@@ -66,7 +66,9 @@ header {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
-
+.section2 ul {
+	margin: 20px 0 20px;
+}
 .section2 li {
 	width: 123px;
 	height: 159px;
@@ -78,7 +80,52 @@ header {
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 }
+.section3 a {
+	display: flex;
+	justify-content: center;
+	padding: 24px 0 0;
+	margin: 30px;
+}
+.section3 span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: orange;
+	width: 430px;
+	height: 65px;
+	font-weight: bold;
+	color: white;
+}
+.section4 .list-content {
+	display: flex;
+	flex-direction: column;
+	
+	margin: 10px;
+}
+.section4 img {
+width: 273px;
+height: 154px;
 
+}
+.section4 div {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	width: 685px;
+}
+.section4 .content-t {
+	border-bottom: 1px solid gray;
+}
+.section4 .content-section4 {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	padding: 10px;
+}
+/* .section4 p {
+	display: flex;
+	text-align: left;
+} */
 
 
 nav {
