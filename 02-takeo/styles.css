@@ -42,9 +42,27 @@ header {
 	height: 200px;
 }
 
+.section1 p {
+	padding: 10px 0;
+	color: blue;
+}
+.section1_end {
+	display: flex;
+	justify-content: center;
+	color: blue;
+	font-weight: bold;
+}
+.section1_end p:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
 .section2 ul {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
+	margin: 10px 10px;
+	gap: 10px;
 }
 @media screen and (max-width: 958px) {
 	.section2 ul {
@@ -66,14 +84,18 @@ header {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
-.section2 ul {
-	margin: 20px 0 20px;
-}
 .section2 li {
 	width: 123px;
 	height: 159px;
 	border-radius: 5px;
-	border: 1px solid gray;
+	border: 1px solid lightgray;
+	font-size: 11px;
+}
+.section2 li p {
+	font-size: 11px;
+	margin-top: 4px;
+	color: black;
+
 }
 .section2 img {
 	width: 100%;
@@ -139,21 +161,15 @@ nav {
 main img {
 	width: 100%;
 }
-article {
-	background: green;
-}
 section {
 	background: white;
 }
 h2 {
 	color: orange;
 	border-bottom: 2px solid orange;
-}
-p {
-	color: blue;
-	padding: 9px auto;
-	display: flex;
-	justify-content: center;
+	margin: 20px 0;
+	padding-bottom: 20px;
+	padding-left: 10px;
 }
 aside {
 	background: blue;
