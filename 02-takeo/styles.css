@@ -46,6 +46,9 @@ header {
 	padding: 10px 0;
 	color: blue;
 }
+.section1 p:hover {
+	text-decoration: underline;
+}
 .section1_end {
 	display: flex;
 	justify-content: center;
@@ -90,6 +93,10 @@ header {
 	border-radius: 5px;
 	border: 1px solid lightgray;
 	font-size: 11px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .section2 li p {
 	font-size: 11px;
@@ -118,37 +125,26 @@ header {
 	font-weight: bold;
 	color: white;
 }
-.section4 .list-content {
-	display: flex;
-	flex-direction: column;
-	
-	margin: 10px;
-}
-.section4 img {
-width: 273px;
-height: 154px;
-
-}
 .section4 div {
 	display: flex;
-	justify-content: space-between;
-	padding: 10px;
-	width: 685px;
+	height: 200px;
 }
-.section4 .content-t {
-	border-bottom: 1px solid gray;
+.content-t {
+	border-bottom: 1px solid lightgray;
+	margin: 10px;
 }
-.section4 .content-section4 {
+.content-section4 {
 	display: flex;
 	flex-direction: column;
-	text-align: right;
-	padding: 10px;
+	padding-left: 15px;
 }
-/* .section4 p {
-	display: flex;
-	text-align: left;
-} */
-
+span {
+	text-align: right;
+}
+.section4 img {
+	width: 274px;
+	height: 154px;
+}
 
 nav {
 	background: yellow;
@@ -173,9 +169,42 @@ h2 {
 }
 aside {
 	background: blue;
+	height: 100%;
 }
-footer {
-	background: skyblue;
+
+.button-footer span {
+	width: 430px;
+	height: 58px;
+	margin: 0 0 30px;
+	padding: 15px;
+	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.button-footer {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+footer ul {
+	display: flex;
+	justify-content: center;
+	height: 50px;
+}
+.button-contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 0;
+}
+
+h3 {
+	margin: 30px 0 10px;
+}
+footer li + li {
+	margin-left: 30px;
 }
 @media screen and (max-width: 958px) {
   .mainContainer {
