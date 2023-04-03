@@ -22,7 +22,7 @@ header {
 	align-items: center;
 	margin-bottom: 10px;
 }
-h1 {
+.header-top h1 {
 	font-size: 10px;
 	font-weight: lighter;
 }
@@ -211,6 +211,7 @@ ul {
 }
 span {
 	text-align: right;
+	font-weight: bold;
 }
 .section4 img {
 	width: 274px;
@@ -239,19 +240,45 @@ h2 {
 	padding-left: 10px;
 }
 aside {
-	background: blue;
+	/* background: blue; */
 	height: 100%;
+	padding: 0 20px;
 }
-
+.searchformselect {
+display: flex;
+justify-content: space-between;
+}
+aside .search2 {
+	width: 360px;
+	height: 45px;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid none;
+	margin-top: 20px;
+}
+.section-aside2 img {
+	width: 360px;
+	height: 140px;
+	object-fit: cover;
+}
+.button-search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: orange;
+	border: 1px solid orange;
+	border-radius: 5px;
+	width: 80px;
+	height: 40px;	
+	color: white; 
+	
+}
 .button-footer span {
 	width: 430px;
 	height: 58px;
 	margin: 0 0 30px;
 	padding: 15px;
-	border: 2px solid black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	
 }
 .button-footer {
 	display: flex;
@@ -262,6 +289,9 @@ footer ul {
 	display: flex;
 	justify-content: center;
 	height: 50px;
+}
+footer img {
+	border-radius: 5px;
 }
 .button-contact {
 	display: flex;
