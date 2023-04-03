@@ -233,12 +233,10 @@ main {
 	position: relative;
 	&::before, 
 	&::after {
-
 		content: "";
 		display: block;
 		width: 40px;
 		height: 40px;
-		
 		position: absolute;
 		// inset: 0 auto auto 0;
 		top: 0;
