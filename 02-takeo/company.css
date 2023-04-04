@@ -64,13 +64,13 @@
     display: flex;
 }
 .main-background p {
-    color: red;
+    color: white;
     position: absolute;
     font-size: 28px;
     display: flex;
     top: 155px;
     left: 400px;
-    background-color: green;
+    /* background-color: green; */
     width: 856px;
     height: 35px;
 }
