@@ -1,0 +1,22 @@
+
+.section4 div {
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+    /* margin: 0 0 24px;
+    width: 680px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px 4%;
+    grid-gap: 10px;
+    /* grid-auto-rows: minmax(100px, auto); */
+}
+.section4 p {
+    display: grid;
+    row-gap: 20px;
+    min-height: 100px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+  
+}
