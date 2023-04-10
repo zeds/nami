@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="hoge" src="this is source">I am hoge</div>
+  <button id="btn">Press me</button>
+
+  <script>
+    const DOMAIN_NAME='google.com';
+
+    console.log("This is javascript");
+    let element = document.getElementById("hoge");
+    console.log("element=",element);
+    let text = element.getAttribute("id")
+     text = element.getAttribute("src")
+    console.log("text=", text);
+    let debug_text = 'Failure teaches success';
+    debug_text = "Failure teaches success";
+    // debug_text = 'I don't know what you say';
+    debug_text = "I don't know what you say";
+    debug_text = 'I don\'t know what you say';
+    let $of_us = 'team';
+    let await = 'asfasdf';
+    let DebugText, debugText, debug_text2 = 'aaa';
+    let first_name = 'Tsutomu'
+    let last_name = 'Okumura'
+    let full_name = first_name + ' ' + last_name;
+    let back = `${first_name} ${last_name}`
+    console.log(full_name);
+    console.log(back);
+
+    const my_wife = 'Yoshiko';
+    let debug_number = 99;
+    debug_number = debug_number + 1;
+    console.log(debug_number);
+    console.log(typeof(debug_number));
+
+    debug_number = '99';
+    debug_number = debug_number + 1;
+    console.log(debug_number);
+    console.log(typeof(debug_number));
+
+    let x = 10
+x = x + 5
+x += 5
+x -= 5
+x++
+x *= 5
+x /= 5
+    console.log("x=", x);
+
+    let user_login = true
+    user_login = true;
+
+    if ( user_login === true ){
+      console.log("you are login")
+    }else{
+      console.log("please login")
+    }
+
+    let money = 11;
+
+    switch(money){
+      case 100: console.log("you are rich"); break;
+      case 10: console.log("you are poor"); break;
+      default: console.log("you are rich or poor"); break;
+
+    }
+let is_she_hungry = false
+let what_todo = is_she_hungry ? 'Feed something to Kimiko' : 'Make her asleep'
+console.log(what_todo);
+
+let age
+age = 61
+if ( age >= 50 ){
+  if ( age > 60 ){
+    console.log("you almost dead.")
+  }else{
+    console.log("Don't worry")
+  }
+}else{
+  console.log("You are still young!")
+}
+
+
+let baby = 0;
+// 0 false is same
+// 1 true is same
+console.log("baby=",!baby);
+
+function add(a,b){
+  return a / b;
+}
+
+console.log(add(3,2))
+
+
+let btn = document.getElementById("btn");
+let elem = document.getElementById("hoge")
+btn.onclick = function(){
+  elem.style.color = 'red';
+}
+
+let arr = [1,2,3,4,5]
+console.log(arr[1])
+let obj = {name: "Huong", age: 26}
+console.log(obj.name)
+console.log(obj.age)
+console.log(obj)
+
+let arr2 = [
+  {name: "tien"},
+  {name: "hung"},
+  {name: "thai"}
+]
+console.log(arr2);
+
+for(let i=0; i < arr2.length ; i++){
+  // i,j,k
+  if(i===2){
+    arr2[i].age=3;
+  }
+  if(i===0){
+    arr2[i].age=10;
+  }
+  if(i===1){
+    arr2[i].age=40;
+  }
+  switch(i){
+    case 0: arr2[i].age=100;break;
+    case 2: arr2[i].age=77;break;
+  }
+
+  console.log("i=",i);
+  console.log(arr2[i].name,arr2[i].age)
+}
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>
