@@ -5,14 +5,13 @@
     
 }
 .container {
-    background-color: pink;
     color: black;
     width: 500px;
     height: 250px;
     border: 1px solid black;
     margin: 50px auto auto ;
 }
-h1,p, .content {
+h1, .content {
     padding-bottom: 20px;
 }
 h1 {
@@ -22,7 +21,8 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 20px;
+    padding-top: 20px;
+    /* margin-right: 20px; */
 }
 span {
     border: 1px solid black;
@@ -40,4 +40,8 @@ span:hover {
 input {
     border-radius: 3px;
     height: 25px;
+}
+.result p {
+    margin-bottom: 20px;
+
 }
