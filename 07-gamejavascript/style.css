@@ -51,7 +51,7 @@ input {
 .result p {
     margin-bottom: 20px;
 }
-.Notification {
+.lastResult {
     background-color: red;
     color: white;
 }

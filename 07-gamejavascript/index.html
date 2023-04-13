@@ -16,17 +16,36 @@
             <p>We'll tell you if your guess was too high or too low.</p>
             <div class="content">
                 <p>Enter a guess:</p>
-                <input type="text" name="search" placeholder="">
-                <span>Submit guess</span>
+                <input type="text" name="search" placeholder="" class="guessField">
+                <span class="guessSubmit">Submit guess</span>
             </div>
             <div class="result">
-                <p>Previous guesses:</p>
-                <p class="Notification">Wrong!</p>
-                <p>Last guess was too low!</p>
+                <p class="guesses">Previous guesses:</p>
+                <p class="lastResult">Wrong!</p>
+                <p class="lowOrHi">Last guess was too low!</p>
                 <p class="Win">Congratulations! You are right!</p>
                 <span>Start new game</span>
             </div>
         </div>    
     </div>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        console.log (Math.random()) 
+        const guesses = document.querySelector('.guesses');
+        console.log ("guesses=",guesses)
+        const lastResult = document.querySelector('.lastResult');
+        console.log ("lastResult=",lastResult)
+        const lowOrHi = document.querySelector('.lowOrHi');
+        console.log ("lowOrHi=",lowOrHi)
+        const guessSubmit = document.querySelector('.guessSubmit');
+        console.log ("guessSubmit=",guessSubmit)
+        const guessField = document.querySelector('.guessField');
+        console.log ("guessField=",guessField)
+        let guessCount = 1;
+        console.log (guessCount)
+        let resetButton;
+        console.log (resetButton)
+        
+    </script>
 </body>
 </html>
