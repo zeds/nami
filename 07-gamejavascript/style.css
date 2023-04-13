@@ -25,10 +25,11 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.content p {
-    width: 100px;
+.content label {
+    font-size: 12px;
+    width: 120px;
 }
-span {
+.guessSubmit {
     border: 1px solid gray;
     background-color: rgb(240,240,240);
     display: flex;
@@ -48,7 +49,7 @@ input {
     width: 250px;
     margin: 0 5px;
 }
-.result p {
+.resultParas p {
     margin-bottom: 20px;
 }
 .lastResult {

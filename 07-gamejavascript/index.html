@@ -15,16 +15,16 @@
             <p>can guess it in 10 turns or fewer. </p>
             <p>We'll tell you if your guess was too high or too low.</p>
             <div class="content">
-                <p>Enter a guess:</p>
-                <input type="text" name="search" placeholder="" class="guessField">
-                <span class="guessSubmit">Submit guess</span>
+                <label for="guessField">Enter a guess:</label>
+                <input type="number" id="guessField" class="guessField" />
+                <input type="submit" value="Submit guess" class="guessSubmit" />
             </div>
-            <div class="result">
+            <div class="resultParas">
                 <p class="guesses">Previous guesses:</p>
                 <p class="lastResult">Wrong!</p>
                 <p class="lowOrHi">Last guess was too low!</p>
                 <p class="Win">Congratulations! You are right!</p>
-                <span>Start new game</span>
+                <input type="submit" value="Start new game" class="guessSubmit" />
             </div>
         </div>    
     </div>
@@ -45,6 +45,51 @@
         console.log (guessCount)
         let resetButton;
         console.log (resetButton)
+
+        function checkGuess() {
+            // 33
+            const userGuess = Number(guessField.value);
+            if (guessCount === 1) {
+                guesses.textContent = 'Previous guesses: ';
+            }
+            guesses.textContent += `${userGuess} `;
+
+            if (userGuess === randomNumber) {
+                lastResult.textContent = 'Congratulations! You got it right!';
+                lastResult.style.backgroundColor = 'green';
+                lowOrHi.textContent = '';
+                setGameOver();
+            } else if (guessCount === 10) {
+                lastResult.textContent = '!!!GAME OVER!!!';
+                lowOrHi.textContent = '';
+                setGameOver();
+            } else {
+                lastResult.textContent = 'Wrong!';
+                lastResult.style.backgroundColor = 'red';
+                if (userGuess < randomNumber) {
+                lowOrHi.textContent = 'Last guess was too low!';
+                } else if (userGuess > randomNumber) {
+                lowOrHi.textContent = 'Last guess was too high!';
+                }
+            }
+
+            guessCount++;
+            guessField.value = '';
+            guessField.focus();
+        }
+
+        guessSubmit.addEventListener('click', checkGuess);
+
+        function setGameOver() {
+            guessField.disabled = true;
+            guessSubmit.disabled = true;
+            resetButton = document.createElement('button');
+            resetButton.textContent = 'Start new game';
+            document.body.append(resetButton);
+            resetButton.addEventListener('click', resetGame);
+        }
+
+        
         
     </script>
 </body>
