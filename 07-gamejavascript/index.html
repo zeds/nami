@@ -17,14 +17,13 @@
             <div class="content">
                 <label for="guessField">Enter a guess:</label>
                 <input type="number" id="guessField" class="guessField" />
-                <input type="submit" value="Submit guess" class="guessSubmit" />
+                <input type="submit" value="Submit guess" id="guessSubmit"class="guessSubmit" />
             </div>
             <div class="resultParas">
-                <p class="guesses">Previous guesses:</p>
-                <p class="lastResult">Wrong!</p>
-                <p class="lowOrHi">Last guess was too low!</p>
-                <p class="Win">Congratulations! You are right!</p>
-                <input type="submit" value="Start new game" class="guessSubmit" />
+                <p class="guesses"></p>
+                <p class="lastResult"></p>
+                <p class="lowOrHi"></p>
+                <!-- <input type="submit" value="Start new game" class="resetGame" /> -->
             </div>
         </div>    
     </div>
@@ -85,10 +84,28 @@
             guessSubmit.disabled = true;
             resetButton = document.createElement('button');
             resetButton.textContent = 'Start new game';
-            document.body.append(resetButton);
+            document.body.appendChild(resetButton);
             resetButton.addEventListener('click', resetGame);
         }
+        function resetGame() {
+            guessCount = 1;
 
+            const resetParas = document.querySelectorAll('.resultParas p');
+            for (const resetPara of resetParas) {
+                resetPara.textContent = '';
+            }
+
+            resetButton.parentNode.removeChild(resetButton);
+
+            guessField.disabled = false;
+            guessSubmit.disabled = false;
+            guessField.value = '';
+            guessField.focus();
+
+            lastResult.style.backgroundColor = 'white';
+
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+            }
         
         
     </script>

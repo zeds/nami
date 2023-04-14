@@ -49,15 +49,12 @@ input {
     width: 250px;
     margin: 0 5px;
 }
-.resultParas p {
+/* .resultParas p {
     margin-bottom: 20px;
-}
+} */
 .lastResult {
     background-color: red;
     color: white;
 }
-.Win {
-    background-color: green;
-    color: white;
-}
+
 
