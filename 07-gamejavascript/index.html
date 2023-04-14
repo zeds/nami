@@ -16,8 +16,10 @@
             <p>We'll tell you if your guess was too high or too low.</p>
             <div class="content">
                 <label for="guessField">Enter a guess:</label>
-                <input type="number" id="guessField" class="guessField" />
-                <input type="submit" value="Submit guess" id="guessSubmit"class="guessSubmit" />
+                <input type="number" min="1" max="100" required id="guessField" class="guessField" />
+                
+                
+                <input type="submit" value="Submit guess" class="guessSubmit" />
             </div>
             <div class="resultParas">
                 <p class="guesses"></p>
@@ -27,22 +29,47 @@
             </div>
         </div>    
     </div>
+
+    <!-- <script>
+        const container = document.querySelector('.section');
+
+        console.log("this is script")
+        let resetButton;
+        resetButton = document.createElement('button');
+        resetButton.textContent = 'Start new game';
+        // document.body.appendChild(resetButton);
+        container.appendChild(resetButton);
+
+    </script> -->
+
+
     <script>
+        const container = document.querySelector('.section');
         let randomNumber = Math.floor(Math.random() * 100) + 1;
         console.log (Math.random()) 
         const guesses = document.querySelector('.guesses');
         console.log ("guesses=",guesses)
+
         const lastResult = document.querySelector('.lastResult');
         console.log ("lastResult=",lastResult)
+
         const lowOrHi = document.querySelector('.lowOrHi');
         console.log ("lowOrHi=",lowOrHi)
+
         const guessSubmit = document.querySelector('.guessSubmit');
         console.log ("guessSubmit=",guessSubmit)
+
         const guessField = document.querySelector('.guessField');
+        console.log("g=", guessField);
+
         console.log ("guessField=",guessField)
+
         let guessCount = 1;
         console.log (guessCount)
+
         let resetButton;
+
+        guessField.focus();
         console.log (resetButton)
 
         function checkGuess() {
@@ -84,7 +111,9 @@
             guessSubmit.disabled = true;
             resetButton = document.createElement('button');
             resetButton.textContent = 'Start new game';
-            document.body.appendChild(resetButton);
+            // document.body.appendChild(resetButton);
+            container.appendChild(resetButton);
+
             resetButton.addEventListener('click', resetGame);
         }
         function resetGame() {
@@ -109,5 +138,6 @@
         
         
     </script>
+
 </body>
 </html>

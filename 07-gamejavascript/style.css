@@ -26,9 +26,9 @@ h1 {
     padding-bottom: 20px;
 }
 .content label {
-    font-size: 12px;
     width: 120px;
 }
+
 .guessSubmit {
     border: 1px solid gray;
     background-color: rgb(240,240,240);
@@ -36,17 +36,18 @@ h1 {
     align-items: center;
     justify-content: center;
     height: 25px;
-    width: 130px;
+    width: 100px;
     border-radius: 5px;
 }
+
 .content span:hover {
     background-color: gray;
 }
 input {
+    flex: auto;
     border-radius: 3px;
     border: 1px solid gray;
     height: 25px;
-    width: 250px;
     margin: 0 5px;
 }
 /* .resultParas p {
