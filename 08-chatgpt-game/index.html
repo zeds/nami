@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>数字当てゲーム</title>
+  <style>
+    /* スタイルの定義 */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .message {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>数字当てゲーム</h1>
+    <p>1から100の数字を当ててください。</p>
+    <form id="guessForm">
+      <input type="number" id="guessInput" min="1" max="100" placeholder="数字を入力してください" required>
+      <button type="submit">チェック</button>
+    </form>
+    <p id="message" class="message"></p>
+  </div>
+
+  <script>
+    // JavaScriptのコード
+    // ランダムな数字を生成
+    const targetNumber = Math.floor(Math.random() * 100) + 1;
+    let guesses = 0; // プレイヤーの回答回数
+
+    document.getElementById('guessForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const guess = parseInt(document.getElementById('guessInput').value); // 入力された数字を取得
+      const messageElement = document.getElementById('message');
+
+      // 入力された数字が正解の場合
+      if (guess === targetNumber) {
+        guesses++;
+        messageElement.textContent = `正解！${targetNumber}が選ばれました。${guesses}回目で当たりました！`;
+        document.getElementById('guessInput').disabled = true;
+        document.getElementById('guessInput').value = '';
+        document.getElementById('guessInput').placeholder = 'ゲーム終了';
+        document.getElementById('guessInput').style.borderColor = 'green';
+      } else if (guess < targetNumber) {
+        // 入力された数字が正解より小さい場合
+        guesses++;
+        messageElement.textContent = `${guess}より大きいです。あと${5 - guesses}回のチャンスがあります。`;
+        document.getElementById('guessInput').value = '';
+        document.getElementById('guessInput').style.borderColor = 'red';
+      } else {
+        // 入力された数字が正解より大きい場合
+        guesses++;
+        messageElement.textContent = `${guess}より小さいです。あと${5 - guesses}回のチャンスがあります。`;
+        document.getElementById('guessInput').value = '';
+        document.getElementById('guessInput').style.borderColor = 'red';
+      }
+
+      // 5回間違えた場合のゲームオーバー処理
+      if (guesses === 5 && guess !== targetNumber)
+{
+messageElement.textContent = `ゲームオーバー！正解は${targetNumber}でした。もう一度プレイするにはページをリロードしてください。`;
+document.getElementById('guessInput').disabled = true;
+document.getElementById('guessInput').value = '';
+document.getElementById('guessInput').placeholder = 'ゲーム終了';
+document.getElementById('guessInput').style.borderColor = 'red';
+document.getElementById('guessForm').removeEventListener('submit', submitHandler);
+}
+});
+
+  </script>
+</body>
+</html>
