@@ -18,10 +18,7 @@
 
   <body>
 
-    <section class="preview">
-
-
-
+    <section>
     </section>
 
   </body>
@@ -34,19 +31,16 @@
     let x = 2, y = 5, z = 10, m = 50;
     let a = x + y;
     console.log(a);
-    let b = m-z;
+    let b = m - z;
     console.log(b);
-    let c = a*b;
+    let c = a * b;
     console.log(c);
     finalResult = c;
     console.log(finalResult);
 
-
-
-
-    // Don't edit the code below here!
-
     const section = document.querySelector('section');
+    // const section = document.getElementsByClassName("preview");
+    // const section = document.getElementById("preview");
 
     const para1 = document.createElement('p');
     const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
