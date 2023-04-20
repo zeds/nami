@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Strings: Task 4</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <section>
+    </section>
+  </body>
+  <script>
+    const theorem = 'Pythagorean theorem';
+    const a = 5;
+    const b = 8;
+    const myString = 'Using *, we can work out that that if the two shortest sides of a right-angled triangle have lengths of * and *, the length of the hypotenuse is *.';
+    console.log(`${theorem}
+    ${myString}`);
+    let x = myString.replace("*","Pythagorean theorem");
+    console.log(x);
+    let y = x.replace("*","a");
+    console.log(y);
+    let z = y.replace("*","b");
+    console.log(x);
+    let m = z.replace("*","√(a**2+b**2)");
+    console.log(m);
+    // Don't edit the code below here!
+    const section = document.querySelector('section');
+    const para1 = document.createElement('p');
+    para1.textContent = m;
+    section.appendChild(para1);
+  </script>
+</html>
