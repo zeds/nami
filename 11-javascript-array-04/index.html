@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        const birds = [ "Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets" ];
+
+        // Add your code here
+        const Animal = birds.indexOf('Eagles');
+        console.log(Animal);
+        if (Animal !== -1) {
+            birds.splice(Animal, 1);
+            }
+        let ebirds = console.log(birds);
+        console.log(ebirds);
+
+        function startsWithE(bird) {
+            return bird.startsWith("E");
+            }
+            const eBirds = birds.filter(startsWithE);
+
+        // Don't edit the code below here!
+        section = document.querySelector("section");
+        section.innerHTML = ' ';
+        const para1 = document.createElement('p');
+        para1.textContent = eBirds;
+        section.appendChild(para1);
+    
+    </script>
+</body>
+</html>
