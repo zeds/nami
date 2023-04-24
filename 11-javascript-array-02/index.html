@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+
+    </section>
+    <script>
+        // Add your code here
+        // question 1
+        let myString = 'Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri';
+        let x=myString.replaceAll('+',',')
+        console.log(x);
+        const myArray = x.split(',');
+        document.write(myArray);
+        console.log(myArray);
+        // question 2
+        let arrayLength = myArray.length;
+        console.log(arrayLength);
+        // question 3
+        let lastItem = myArray[arrayLength-1];
+        console.log(lastItem);
+        
+        // Don't edit the code below here!
+        const section = document.querySelector('section');
+        section.innerHTML = ' ';
+        let para1 = document.createElement('p');
+        para1.textContent = `Array: ${ myArray }`;
+
+        let para2 = document.createElement('p');
+        para2.textContent = `The length of the array is ${ arrayLength }.`;
+
+        let para3 = document.createElement('p');
+        para3.textContent = `The last item in the array is "${ lastItem }".`;
+
+        section.appendChild(para1);
+        section.appendChild(para2);
+        section.appendChild(para3);
+    </script>
+</body>
+</html>
