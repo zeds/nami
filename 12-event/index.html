@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <section></section>
+    <button>Change color</button>
+    <button id="sec">Remove section</button>
+
+
+    <script>
+        const btn = document.querySelector("button");
+
+        function addElement() {
+            const sec = document.querySelector("section");
+            const para = document.createElement('p');
+            para.textContent = "あいえお";
+            sec.appendChild(para);
+        }
+
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        function changeBackground() {
+            const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            document.body.style.backgroundColor = rndCol;
+        }
+
+        btn.addEventListener("click", changeBackground);
+        btn.addEventListener("click", addElement);
+
+    </script>
+
+    
+</body>
+</html>
