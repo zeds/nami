@@ -15,7 +15,17 @@
 
     <script>
         const btn = document.querySelector("button");
-
+        const btn2 = document.getElementById("sec");
+        // function removePara() {
+        //     // const sec = document.querySelector("section");
+        //     const p = document.getElementsByTagName("p")[0];
+        //     p.remove();
+        // }
+        function removeElement() {
+            const p_list = document.getElementsByTagName("p")[0];
+            console.log(p_list);
+            p_list.remove();
+        }
         function addElement() {
             const sec = document.querySelector("section");
             const para = document.createElement('p');
@@ -34,6 +44,7 @@
 
         btn.addEventListener("click", changeBackground);
         btn.addEventListener("click", addElement);
+        btn2.addEventListener("click", removeElement);
 
     </script>
 
