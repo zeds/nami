@@ -5,16 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background: skyblue;
+        }
+        #btn-1 {
+            position: absolute;
+            left: 300px;
+            top: 200px;
+
+        }
+    </style>
 </head>
 <body>
 
-    <section></section>
-    <button>Change color</button>
-    <button id="sec">Remove section</button>
+    <div id="area" class="container">
+        <section></section>
+        <button id="btn-1">Change color</button>
+        <button id="sec">Remove section</button>
+        <p id='output'></p>
+    </div>
 
 
     <script>
+        const area = document.getElementById("area");
         const btn = document.querySelector("button");
+        const btn_remove = document.getElementById("sec");
+
+        document.onmousemove = mouseCoordinates;
+
+        let output = document.getElementById('output');
+
+        function mouseCoordinates(event){
+            var xPos= event.clientX;
+            var yPos= event.clientY;
+            output.innerHTML= "Coordinate (X) : " + xPos + " " + "pixels <br>Coordinate (Y) : " + yPos + " " + "pixels";
+        }
+
+        function removeElement() {
+            const p_list = document.getElementsByTagName("p")[0];
+            // let p = p_list[0];
+            p_list.remove();
+            btn.style.background = 'red';
+            console.log("area=", area);
+            btn.style.left = "200px";
+        }
 
         function addElement() {
             const sec = document.querySelector("section");
@@ -34,6 +72,7 @@
 
         btn.addEventListener("click", changeBackground);
         btn.addEventListener("click", addElement);
+        btn_remove.addEventListener("click", removeElement);
 
     </script>
 
