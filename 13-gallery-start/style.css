@@ -37,6 +37,7 @@ button {
 
 .thumb-bar img {
   display: block;
+  grid-template-columns: repeat(5, 1fr);
   width: 20%;
   float: left;
   cursor: pointer;
