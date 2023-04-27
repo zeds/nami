@@ -42,3 +42,12 @@ button {
   float: left;
   cursor: pointer;
 }
+
+
+.text-area {
+  text-align: center;
+}
+
+p {
+  font-size: 25px;
+}

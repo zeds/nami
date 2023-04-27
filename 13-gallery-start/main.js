@@ -1,3 +1,4 @@
+const p = document.querySelector('p');
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
@@ -25,6 +26,7 @@ for (const image of images) {
     newImage.addEventListener('click', e => {
       displayedImage.src = e.target.src;
       displayedImage.alt = e.target.alt;
+      p.textContent = e.target.alt;
     });
   }
 /* Wiring up the Darken/Lighten button */
