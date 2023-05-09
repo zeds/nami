@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="section">
+
+    </section>
+    <script>
+        const cat = {
+            name : 'Bertie',
+            breed : 'Cymric',
+            color : 'white',
+            greeting: function() {
+                console.log('Meow!');
+            }
+        }
+        
+        // Put your code here
+        
+        //question1_declaring a variable
+        let catName = cat['name'];
+        console.log(catName);
+        //question2_dot notation
+        let hello = cat.greeting();
+        console.log(hello);
+        //question3_change color
+        cat.color = 'black';
+        console.log(cat);
+
+        // Don't edit the code below here
+        section = document.getElementById('section');
+        let para1 = document.createElement('p');
+        let para2 = document.createElement('p');
+        para1.textContent = `The cat's name is ${ cat.name } `;
+        para2.textContent = `The cat's color is ${ cat.color }.`;
+        section.appendChild(para1);
+        section.appendChild(para2);
+    </script>       
+</body>
+</html>
