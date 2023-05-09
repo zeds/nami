@@ -20,10 +20,10 @@
             },
             age: 32,
             bio()  {
-                console.log(`${name[0]} ${this.name[1]} is ${this.age} years old.`);
+                console.log(`${name[0]} ${name[1]} is ${this.age} years old.`);
             },
             introduceSelf: function () {
-                console.log(`Hi! I'm ${this.name[0]}.`);
+                console.log(`Hi! I'm ${this.name['first']}.`);
             },
         };
 
@@ -32,6 +32,9 @@
           console.log("hello world");
         }
         
+        person.bio();
+        person.introduceSelf();
+
         let myObj = { first: "tom", last: "okumura"};
 
 

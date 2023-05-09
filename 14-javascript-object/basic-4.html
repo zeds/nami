@@ -18,13 +18,14 @@
             this.breed = breed;
             this.color = color;
             this.greeting = function (){
-            console.log(`Hello, said ${ this.name } the ${ this.breed }.`)};
+                console.log(`Hello, said ${ this.name } the ${ this.breed }.`)
+            };
         }
         // Tạo đối tượng MeoMun
         var cat1 = new cat("Bertie",'Cymric',"white");
         //Tạo đối tượng MeoMiu
         var cat2 = new cat("Elfie",'Aphrodite Giant',"ginger");
-        cat1.greeting();
+        document.write(cat1.greeting());
         cat2.greeting();
     </script>
 </body>
