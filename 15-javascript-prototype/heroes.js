@@ -8,19 +8,19 @@ console.log(data);
 // title.innerHTML = name;
 // descript.innerHTML = home;
 
-async function populate() {
+// async function populate() {
 
-  const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-  const request = new Request(requestURL);
+//   const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+//   const request = new Request(requestURL);
 
-  const response = await fetch(request);
-  const superHeroesText = await response.text();
+//   const response = await fetch(request);
+//   const superHeroesText = await response.text();
 
-  const superHeroes = JSON.parse(superHeroesText);
-  populateHeader(superHeroes);
-  populateHeroes(superHeroes);
+//   const superHeroes = JSON.parse(superHeroesText);
+//   populateHeader(superHeroes);
+//   populateHeroes(superHeroes);
 
-}
+// }
 
 function populateHeader(obj) {
   const header = document.querySelector('header');
@@ -67,5 +67,10 @@ function populateHeroes(obj) {
   }
 }
 
-populate();
+const output = document.querySelector("p");
+// output.textContent = JSON.stringify(data);
+populateHeader(data);
+populateHeroes(data);
+
+// populate();
   
