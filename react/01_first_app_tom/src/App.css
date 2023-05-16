@@ -3,3 +3,23 @@
   height: 100vh;
   background: gray;
 }
+
+header {
+  width: 100%;
+  height: 64px;
+  background: blue;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  display: block;
+  height: 49px;
+}
+
+input {
+  height: 40px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/TD.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Tips Discover</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "tom.zed39@gmail.com",
+          Password : "D3B555755D52473CDA7761869C6D3FE4A290",
+          To : 'tom.zed39@gmail.com',
+          From : "tom.zed39@gmail.com",
+          Subject : "This is the subject",
+          Body : "And this is the body"
+      }).then(
+        message => alert(message)
+      );
+      }
+    </script>
+  </body>
+</html>

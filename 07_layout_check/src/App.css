@@ -1,0 +1,29 @@
+/*
+【ルール】
+　h1-h4までしか使わない
+　pはh4と同じサイズ
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	/* white-space: pre-wrap; */
+}
+html {
+	/* 16pxの62.5%=10px */
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+	font-family: 'Noto Sans';
+}
+
+
+section {
+	display: flex;
+	flex-direction: column;
+}
+

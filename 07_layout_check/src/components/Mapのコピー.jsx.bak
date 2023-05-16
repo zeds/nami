@@ -1,0 +1,49 @@
+import React, { Component } from 'react';
+
+class Map extends Component {
+  //アルカセントラル
+  //35.697548717962505, 139.81148509979462
+  constructor(props) {
+    super(props);
+    this.state = {
+      locations: [
+        { name: 'アルカセントラル', location: { lat: 35.6975487, lng: 139.8114850 } }
+      ]
+    };
+  }
+
+  // Google Maps APIを読み込む
+  componentDidMount() {
+    console.log("地図読み込み")
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAKqVSNX-tZ_Z7OI_R__pQUspeEZnlMXfc`;
+    script.async = true;
+    script.onload = () => this.initMap();
+    document.body.appendChild(script);
+  }
+
+  // 地図を初期化する
+  initMap() {
+    const map = new window.google.maps.Map(document.getElementById('map'), {
+      center: { lat: 35.69754, lng: 139.8114850 },
+      zoom: 17
+    });
+
+    // マーカーを追加する
+    this.state.locations.forEach(location => {
+      const marker = new window.google.maps.Marker({
+        position: location.location,
+        map: map,
+        title: location.name
+      });
+    });
+  }
+
+  render() {
+    return (
+      <div id="map" style={{ width: '100%', height: '500px' }}></div>
+    );
+  }
+}
+
+export default Map;
