@@ -17,6 +17,7 @@ import Footer from './components/Footer'
 import Maker from './pages/Maker'
 import SpecialArticle from './components/SpecialArticle'
 import Article from './components/Article'
+import ProductDetail from './pages/ ProductDetail'
 
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
 					<Route path="/business" element={<Business />} />
 					<Route path="/maker" element={<Maker />} />
 					<Route path="/special_article/:id" element={<SpecialArticle />} />
+					<Route path="/product_detail" element={<ProductDetail />} />
+
 
 				</Routes>
 				<Footer />

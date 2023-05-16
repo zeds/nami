@@ -89,7 +89,7 @@ const Company = () => {
   return (
     <Container>
       <Breadcrumb items={items}/>
-      <h1>会社概要</h1>
+      <h1>会社概要  Tôi ten là tom.</h1>
       <MainContainer>
         <GridContainer>
             <p>社名</p>
