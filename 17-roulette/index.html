@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ルーレット</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="rouletteCanvas" width="400" height="400"></canvas>
+  <button onclick="startRotation()">スタート</button>
+  <button onclick="stopRotation()">ストップ</button>
+
+  <script>
+    var canvas = document.getElementById('rouletteCanvas');
+    var ctx = canvas.getContext('2d');
+    var rotationAngle = 0;
+    var rotationInterval;
+
+    function drawRoulette() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // ルーレットの外側の円を描画
+      ctx.beginPath();
+      ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 2 - 10, 0, 2 * Math.PI);
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 5;
+      ctx.stroke();
+
+      // ルーレットの数字を描画
+      ctx.font = '20px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      var numAngles = 12; // 表示する数字の数
+      var angle = 2 * Math.PI / numAngles;
+      var startAngle = rotationAngle;
+
+      for (var i = 0; i < numAngles; i++) {
+        var number = i + 1;
+        var textAngle = startAngle + i * angle + angle / 2;
+
+        ctx.save();
+        ctx.translate(canvas.width / 2, canvas.height / 2);
+        ctx.rotate(textAngle);
+        ctx.fillStyle = 'black';
+        ctx.fillText(number.toString(), 0, -canvas.width / 2 + 30);
+        ctx.restore();
+      }
+    }
+
+    function startRotation() {
+      rotationInterval = setInterval(rotateRoulette, 100);
+    }
+
+    function rotateRoulette() {
+      rotationAngle += Math.PI / 180; // 1度ずつ回転（ラジアンに変換）
+      drawRoulette();
+    }
+
+    function stopRotation() {
+      clearInterval(rotationInterval);
+    }
+
+    // 初期描画
+    drawRoulette();
+  </script>
+</body>
+</html>
